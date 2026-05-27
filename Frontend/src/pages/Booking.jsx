@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import garageBg from '../assets/Garage.png.png';
 
-const API_URL = import.meta.env.API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 const vehicleTypes = ['Bus', 'Truck', 'Car / 4-Wheeler', 'Van', 'Heavy Machinery', 'Other'];
 
 const serviceOptions = [
@@ -44,6 +44,8 @@ export default function Booking() {
       setSubmitted(true);
     } catch (error) {
       setErrorMessage(error.message || "Something went wrong. Please check your connection.");
+      console.log(API_URL);
+      console.log(`${API_URL}/api/bookings`);
     } finally {
       setLoading(false);
     }
