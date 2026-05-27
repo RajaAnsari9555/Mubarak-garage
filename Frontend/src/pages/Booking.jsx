@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import garageBg from '../assets/Garage.png.png';
 
+const API_URL = import.meta.env.API_URL;
 const vehicleTypes = ['Bus', 'Truck', 'Car / 4-Wheeler', 'Van', 'Heavy Machinery', 'Other'];
 
 const serviceOptions = [
@@ -26,7 +27,7 @@ export default function Booking() {
     setLoading(true);
     setErrorMessage('');
     try {
-      const response = await fetch("http://localhost:5000/api/bookings", {
+      const response = await fetch(`${API_URL}/api/bookings`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

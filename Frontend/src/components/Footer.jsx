@@ -96,7 +96,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-white/40 text-[10px] uppercase tracking-widest">Phone</p>
-                <p className="text-white font-bold text-sm group-hover:text-orange-300 transition-colors">7897659266</p>
+                <p className="text-white font-bold text-sm group-hover:text-orange-300 transition-colors">78976592**</p>
               </div>
             </a>
 
